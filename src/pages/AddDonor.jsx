@@ -1,6 +1,26 @@
-import React from 'react'
+import { useState } from "react";
 
 const AddDonor = () => {
+
+  const [input, setInput] = useState({
+    donor_name: "",
+    age: "",
+    gender: "",
+    blood_group: "",
+    phone: "",
+    email: "",
+    city: "",
+    weight_kg: "",
+    last_donation_date: ""
+  });
+
+  const inputHandler = (e) => {
+    setInput({
+      ...input,
+      [e.target.name]: e.target.value
+    });
+  };
+
   return (
     <div className="container mt-5">
 
@@ -12,9 +32,7 @@ const AddDonor = () => {
 
         <div className="card-body">
 
-          <form>
-
-          </form>
+          {/* Form fields will be added here */}
 
         </div>
 
